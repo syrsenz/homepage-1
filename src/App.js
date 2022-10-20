@@ -1,23 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./index.css";
+import Beranda from "./routes/Beranda";
+import Profil from "./routes/Profil";
+import Berita from "./routes/Berita";
+import Prestasi from "./routes/Prestasi";
+import Galeri from "./routes/Galeri";
+
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Beranda />} />
+        <Route path="/profil" element={<Profil />} />
+        <Route path="/berita" element={<Berita />} />
+        <Route path="/prestasi" element={<Prestasi />} />
+        <Route path="/galeri" element={<Galeri />} />
+      </Routes>
     </div>
   );
 }
